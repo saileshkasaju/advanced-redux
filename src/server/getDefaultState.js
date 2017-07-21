@@ -4,7 +4,7 @@ import {
     User,
     channels,
     Channel
-} from './db';
+} from './db/index';
 
 export const getDefaultState = (currentUser)=>{
 

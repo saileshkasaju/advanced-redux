@@ -1,7 +1,7 @@
 import {
     channels,
     users
-} from './'
+} from './index'
 
 import {
     template
