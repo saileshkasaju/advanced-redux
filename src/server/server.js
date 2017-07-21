@@ -6,7 +6,7 @@ import webpackConfig from './../webpack.config'
 import webpackDevMiddleware from 'webpack-dev-middleware';
 const compiler = webpack(webpackConfig);
 import webpackHotMiddleware from "webpack-hot-middleware";
-
+import socketIO from 'socket.io';
 import {
     channels,
 } from './db/Channel';
@@ -17,6 +17,7 @@ import {
 
 let app = express();
 const server = http.createServer(app);
+const io = socketIO(server);
 
 app.use(cors());
 app.use(webpackDevMiddleware(compiler, {
